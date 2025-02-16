@@ -1,0 +1,24 @@
+{
+  "HomePage": {
+    "title": "Hello world!",
+    "about": "About",
+    "front_end_developer": "Frontend Developer",
+    "i_am": "I'm",
+    "my_name": "Nguyen Van Tai",
+    "experient": "I have over one year of experience in frontend development with React.js"
+  },
+
+  "Header": {
+    "my_name": "Nguyen Van Tai"
+  },
+
+  "Nav": {
+    "resume": "Resume",
+    "demo": "Demo",
+    "info": "Infomation",
+    "home": "Home",
+    "work": "Work",
+    "contact": "Contact",
+    "services": "Services"
+  }
+}

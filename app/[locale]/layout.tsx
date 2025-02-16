@@ -1,29 +1,25 @@
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
-import "../globals.css"
+import PageTransition from "@/components/PageTransition";
+import StairsTransition from "@/components/StairsTransition";
+
+export const metadata = {
+  title: "Tai Portfolio Home",
+  description: "By Nextjs 15"
+}
 
 export default async function LocaleLayout({
   children,
-  params: { locale }
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  // Ensure that the incoming `locale` is valid
-
-  // Providing all messages to the client
-  // side is the easiest way to get started
-  const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning >
-      <body>
-        <NextIntlClientProvider messages={messages}>
-          <div>
-            {children}
-          </div>
-        </NextIntlClientProvider>
-      </body>
-    </html>
+    <div>
+      <StairsTransition />
+      <PageTransition>
+        {children}
+      </PageTransition>
+    </div>
+
   );
 }
