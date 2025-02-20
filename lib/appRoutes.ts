@@ -19,4 +19,9 @@ export const AppRoutes = {
     renderUrl: () => AppRoutes.demo.href
   },
 
+  experience: {
+    href: "/experience",
+    renderUrl: () => AppRoutes.experience.href
+  }
+
 }

@@ -9,26 +9,26 @@ const links = (translate: (key: string) => string) => [
     name: translate("home"),
     path: "/"
   },
+  // {
+  //   name: translate("services"),
+  //   path: "/services"
+  // },
   {
-    name: translate("services"),
-    path: "/services"
+    name: translate("experience"),
+    path: AppRoutes.experience.href
   },
-  {
-    name: translate("resume"),
-    path: AppRoutes.resume.href
-  },
-  {
-    name: translate("work"),
-    path: "/work"
-  },
-  {
-    name: translate("contact"),
-    path: "/contact"
-  },
-  {
-    name: translate("info"),
-    path: AppRoutes.info.href
-  },
+  // {
+  //   name: translate("work"),
+  //   path: "/work"
+  // },
+  // {
+  //   name: translate("contact"),
+  //   path: "/contact"
+  // },
+  // {
+  //   name: translate("info"),
+  //   path: AppRoutes.info.href
+  // },
   {
     name: translate("demo"),
     path: AppRoutes.demo.href
