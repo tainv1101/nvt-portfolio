@@ -1,5 +1,8 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
-
+"use client"
+import { FaWpforms, FaInfinity } from "react-icons/fa6";
+import { SiReactquery, SiLazyvim } from "react-icons/si";
+import { BiSolidMemoryCard } from "react-icons/bi";
+import { IoExitOutline } from "react-icons/io5";
 import {
   Sidebar,
   SidebarContent,
@@ -16,52 +19,58 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
+import { Link, useRouter } from "@/i18n/routing";
 
 // Menu items.
 const items = [
   {
-    title: "Home",
+    title: "Form",
     url: "#",
-    icon: Home,
+    icon: FaWpforms,
   },
   {
-    title: "Inbox",
+    title: "React-query",
     url: "#",
-    icon: Inbox,
+    icon: SiReactquery,
   },
   {
-    title: "Calendar",
+    title: "Catching",
     url: "#",
-    icon: Calendar,
+    icon: BiSolidMemoryCard,
   },
   {
-    title: "Search",
+    title: "Lazy loading",
     url: "#",
-    icon: Search,
+    icon: SiLazyvim,
   },
   {
-    title: "Settings",
+    title: "Infinity loading",
     url: "#",
-    icon: Settings,
+    icon: FaInfinity,
   },
 ]
 
 export function AppSidebar() {
   // collapsible="offcanvas | icon | none"
+  const router = useRouter()
   return (
     <Sidebar variant="inset" collapsible="icon">
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel>Nguyễn Văn Tài</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    {/* <div onClick={() => router.push("/demo?form")}>
                       <item.icon />
                       <span>{item.title}</span>
-                    </a>
+                    </div> */}
+                    <Link href={item.url}>
+                      <item.icon />
+                      <span>{item.title}</span>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
@@ -70,7 +79,7 @@ export function AppSidebar() {
         </SidebarGroup>
 
 
-        <SidebarGroup>
+        {/* <SidebarGroup>
           <SidebarGroupLabel>Liaw</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
@@ -91,11 +100,15 @@ export function AppSidebar() {
               </SidebarMenuAction>
             </SidebarMenu>
           </SidebarGroupContent>
-        </SidebarGroup>
+        </SidebarGroup> */}
 
       </SidebarContent>
-      <SidebarFooter>
-        <strong>Exit</strong>
+      <SidebarFooter >
+
+        <Link href={"/"} className="flex flex-row items-center justify-center gap-2 hover:text-primary hover:scale-125">
+          <IoExitOutline />
+          <span>Exit</span>
+        </Link>
       </SidebarFooter>
     </Sidebar >
   )
