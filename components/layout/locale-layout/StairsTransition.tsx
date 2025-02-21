@@ -1,7 +1,7 @@
 "use client"
 // import { usePathname } from "@/i18n/routing"
 import { usePathname } from "@/i18n/routing";
-import { AnimatePresence, motion } from "motion/react"
+import { AnimatePresence } from "motion/react"
 import Stairs from "./Stairs";
 
 
@@ -14,11 +14,11 @@ function StairsTransition() {
           <Stairs />
         </div>
       </div>
-      <motion.div
+      {/* <motion.div
         className="h-screen w-screen fixed bg-primary top-0 pointer-events-none"
         initial={{ opacity: 1 }}
         animate={{ opacity: 0, transition: { delay: 0.8, duration: 0.3, ease: "easeInOut" } }}
-      />
+      /> */}
     </AnimatePresence>
   );
 }
