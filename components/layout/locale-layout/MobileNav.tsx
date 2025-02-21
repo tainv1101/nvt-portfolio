@@ -1,7 +1,7 @@
 "use client"
 
 import { AppRoutes } from "@/lib/appRoutes";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "../../ui/sheet";
 import { CiMenuFries } from "react-icons/ci";
 import { Link, usePathname } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
@@ -11,26 +11,26 @@ const links = (translate: (key: string) => string) => [
     name: translate("home"),
     path: "/"
   },
+  // {
+  //   name: translate("services"),
+  //   path: "/services"
+  // },
   {
-    name: translate("services"),
-    path: "/services"
+    name: translate("experience"),
+    path: AppRoutes.experience.href
   },
-  {
-    name: translate("resume"),
-    path: AppRoutes.resume.href
-  },
-  {
-    name: translate("work"),
-    path: "/work"
-  },
-  {
-    name: translate("contact"),
-    path: "/contact"
-  },
-  {
-    name: translate("info"),
-    path: AppRoutes.info.href
-  },
+  // {
+  //   name: translate("work"),
+  //   path: "/work"
+  // },
+  // {
+  //   name: translate("contact"),
+  //   path: "/contact"
+  // },
+  // {
+  //   name: translate("info"),
+  //   path: AppRoutes.info.href
+  // },
   {
     name: translate("demo"),
     path: AppRoutes.demo.href

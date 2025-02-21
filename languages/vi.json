@@ -20,6 +20,32 @@
     "home": "Trang chủ",
     "work": "Work",
     "contact": "Contact",
-    "services": "Services"
+    "services": "Services",
+    "experience": "Kinh nghiệm"
+  },
+
+  "Experience": {
+    "name": "Tên",
+    "my_description": "I'm a frontend developer",
+    "about_me": "Về tôi",
+    "my_name": "Nguyễn Văn Tài",
+    "phone": "Điẹn thoại",
+    "email": "Email",
+    "experience": "Kinh nghiệm",
+    "over_1_year": "Hơn 1 năm",
+    "membee_merchant_job_1": "Maintain the website and add new features",
+    "membee_merchant_job_2": "Build UI/UX based on Figma designs by ReactJS and NextJS",
+    "membee_merchant_job_3": "Create shared components",
+    "membee_merchant_job_4": "Integrate API",
+
+    "membee_zalo_job_1": "Developed the frontend of the website using ReactJS and TypeScript",
+    "membee_zalo_job_2": "Build UI/UX based on Figma designs",
+    "membee_zalo_job_3": "Integrate Membee API and Zalo Mini App API",
+
+    "membee_shopify_job_1": "Developed the frontend of the website using ReactJS and Remix",
+    "membee_shopify_job_2": "Use Shopify Polaris design system to build UI/UX based on Figma designs",
+    "membee_shopify_job_3": "Integrate Membee API and Shopify API",
+    "technologies": "Công nghệ",
+    "tasks": "Công việc"
   }
 }

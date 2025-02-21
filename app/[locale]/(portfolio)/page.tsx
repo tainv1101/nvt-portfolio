@@ -1,15 +1,17 @@
-"use client";
+// "use client";
 import { Button } from "@/components/ui/button";
-import { useTranslations } from "next-intl";
+// import { useTranslations } from "next-intl";
+import { getTranslations } from 'next-intl/server';
 import { FiDownload } from "react-icons/fi"
 
 // component
 import Socials from "@/components/home/Socials";
 import { cn } from "@/lib/utils";
 import Photo from "@/components/home/Photo";
+import Stats from "@/components/home/Stats";
 
-export default function Home() {
-  const translate = useTranslations("HomePage")
+export default async function Home() {
+  const translate = await getTranslations("HomePage")
   return (
     <section className="h-full mt-8">
       <div className="container h-full mx-auto">
@@ -45,7 +47,9 @@ export default function Home() {
           <div>
             <Photo />
           </div>
+
         </div>
+        <Stats />
       </div>
     </section>
   )
