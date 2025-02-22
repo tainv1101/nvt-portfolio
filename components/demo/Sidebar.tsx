@@ -11,15 +11,15 @@ import {
   SidebarGroupContent,
   SidebarGroupLabel,
   SidebarMenu,
-  SidebarMenuAction,
-  SidebarMenuBadge,
+  // SidebarMenuAction,
+  // SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarMenuSub,
-  SidebarMenuSubButton,
-  SidebarMenuSubItem,
+  // SidebarMenuSub,
+  // SidebarMenuSubButton,
+  // SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
-import { Link, useRouter } from "@/i18n/routing";
+import { Link } from "@/i18n/routing";
 
 // Menu items.
 const items = [
@@ -52,7 +52,6 @@ const items = [
 
 export function AppSidebar() {
   // collapsible="offcanvas | icon | none"
-  const router = useRouter()
   return (
     <Sidebar variant="inset" collapsible="icon">
       <SidebarContent>

@@ -1,5 +1,5 @@
 "use client"
-import { FaHtml5 as HTML, FaCss3 as Css, FaJs as Javascript, FaReact as ReactJS } from "react-icons/fa"
+import { FaHtml5 as HTML, FaReact as ReactJS } from "react-icons/fa"
 import { BiLogoTypescript as TypeScript, BiLogoTailwindCss as TailwindCSS } from "react-icons/bi";
 import { SiNextdotjs as NextJS } from "react-icons/si"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
