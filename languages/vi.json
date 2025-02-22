@@ -5,8 +5,8 @@
     "front_end_developer": "Frontend Developer",
     "i_am": "Mình là",
     "my_name": "Nguyễn Văn Tài",
+    "slogan": "Không sợ tìm hiểu, học tập công nghệ mới và kiến thức mới. Chỉ sợ không có cơ hội áp dụng rồi lãng quên.",
     "experient": "Mình đã có hơn 1 năm kinh nghiệm lập trình frontend với React.js"
-
   },
 
   "Header": {
@@ -33,6 +33,8 @@
     "email": "Email",
     "experience": "Kinh nghiệm",
     "over_1_year": "Hơn 1 năm",
+    
+    "my_experience": "Kinh nghiệm",
     "membee_merchant_job_1": "Maintain the website and add new features",
     "membee_merchant_job_2": "Build UI/UX based on Figma designs by ReactJS and NextJS",
     "membee_merchant_job_3": "Create shared components",
