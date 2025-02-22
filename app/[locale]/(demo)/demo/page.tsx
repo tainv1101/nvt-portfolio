@@ -3,7 +3,7 @@ const DemoPage = () => {
     <section className="h-full w-full">
       <div className="container min-h-[80vh] mx-auto">
 
-        <div className="inline-block mx-auto text-6xl">Comming soon...</div>
+        <div className="inline-block mx-auto text-6xl">Coming soon...</div>
         {/* <div className="flex">
           
         </div> */}
