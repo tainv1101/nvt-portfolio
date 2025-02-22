@@ -1,53 +1,28 @@
 "use client"
-import { FaHtml5 as HTML, FaReact as ReactJS } from "react-icons/fa"
+import { FaReact as ReactJS } from "react-icons/fa"
 import { BiLogoTypescript as TypeScript, BiLogoTailwindCss as TailwindCSS } from "react-icons/bi";
-import { SiNextdotjs as NextJS } from "react-icons/si"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-
-const getTechIcon = (tech: string): React.ElementType => {
-  switch (tech) {
-    case "NextJS":
-      return NextJS;
-    case "ReactJS":
-      return ReactJS;
-    case "TypeScript":
-      return TypeScript;
-    case "TailwindCSS":
-      return TailwindCSS;
-    default:
-      return HTML; // Fallback nếu không tìm thấy
-  }
-};
-// import { ScrollArea } from "@/components/ui/scroll-area"
-// "NextJS, ReactJS, Redux, Axios,..."
-// "ReactJS, Recoil, Axios, TailwindCSS"
-// Remix, ReactJS, Zustand, Axios,...
-import { motion } from "motion/react"
+import { SiNextdotjs as NextJS, SiRemix as Remix } from "react-icons/si";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { motion } from "motion/react";
 import { useTranslations } from "next-intl";
 
-// const about = (translate: (key: string) => string) => ({
-//   title: translate("about_me"),
-//   description: translate("my_description"),
-//   info: [
-//     {
-//       fieldName: translate("name"),
-//       fieldValue: translate("my_name")
-//     },
-//     {
-//       fieldName: translate("phone"),
-//       fieldValue: "0814499952"
-//     },
-//     {
-//       fieldName: translate("email"),
-//       fieldValue: "tainv1101@gmail.com"
-//     },
-//     {
-//       fieldName: translate("experience"),
-//       fieldValue: translate("over_1_year")
-//     },
-//   ]
-// })
+const getTechIcon = (tech: string): React.ReactNode => {
+  switch (tech) {
+    case "NextJS":
+      return <NextJS size={40} className="m-auto" />;
+    case "ReactJS":
+      return <ReactJS size={40} className="m-auto" />;
+    case "TypeScript":
+      return <TypeScript size={40} className="m-auto" />;
+    case "TailwindCSS":
+      return <TailwindCSS size={40} className="m-auto" />;
+    case "Remix":
+      return <Remix size={40} className="m-auto" />;
+    default:
+      return; // Fallback nếu không tìm thấy
+  }
+};
 
 
 const experience = (translate: (key: string) => string) => ({
@@ -76,7 +51,7 @@ const experience = (translate: (key: string) => string) => ({
         translate("membee_zalo_job_2"),
         translate("membee_zalo_job_3"),
       ],
-      techs: "ReactJS, Recoil, TaiwindCSS, Axios,..."
+      techs: "ReactJS, Recoil, TailwindCSS, Axios,..."
     },
     {
       id: "shopify",
@@ -152,7 +127,7 @@ function Experience() {
                                 <TooltipTrigger asChild>
                                   {/* <TagName /> */}
                                   <div className="p-4 border-accent border rounded-md flex-1">
-                                    <TechIcon size={40} className="m-auto" />
+                                    {TechIcon}
                                   </div>
                                 </TooltipTrigger>
                                 <TooltipContent>

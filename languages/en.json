@@ -5,6 +5,7 @@
     "front_end_developer": "Frontend Developer",
     "i_am": "I'm",
     "my_name": "Nguyen Van Tai",
+    "slogan": "Not afraid of exploring and learning new technologies and knowledge—only afraid of not having the opportunity to apply them and then forgetting.",
     "experient": "I have over one year of experience in frontend development with React.js"
   },
 
@@ -27,10 +28,11 @@
     "name": "name",
     "my_description": "I'm a frontend developer",
     "about_me":"About me",
-    "my_name": "my_name",
+    "my_name": "Nguyen Van Tai",
     "phone": "Phone",
     "email": "Email",
     "experience": "Experience",
+
     "over_1_year": "Over 1 year",
     "my_experience": "My experience",
     "membee_merchant_job_1": "Maintain the website and add new features",

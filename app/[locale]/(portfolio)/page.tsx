@@ -1,14 +1,13 @@
 // "use client";
-import { Button } from "@/components/ui/button";
 // import { useTranslations } from "next-intl";
 import { getTranslations } from 'next-intl/server';
-import { FiDownload } from "react-icons/fi"
 
 // component
 import Socials from "@/components/home/Socials";
 import { cn } from "@/lib/utils";
 import Photo from "@/components/home/Photo";
 import Stats from "@/components/home/Stats";
+import DownLoadCVBtn from '@/components/home/DownLoadCVBtn';
 
 export default async function Home() {
   const translate = await getTranslations("HomePage")
@@ -25,14 +24,11 @@ export default async function Home() {
               <span className="text-accent">{translate("my_name")}</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              {translate("experient")}
+              {translate("slogan")}
             </p>
             {/* Socials */}
             <div className="flex flex-col xl:flex-row gap-8 items-center">
-              <Button className="d-flex items-center gap-2 w-[220px]" size="lg" variant="outline">
-                <span>Download CV</span>
-                <FiDownload />
-              </Button>
+              <DownLoadCVBtn />
 
               <div className="mb-8 xl:mb-0">
                 <Socials
