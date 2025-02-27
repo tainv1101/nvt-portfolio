@@ -86,7 +86,7 @@ function Experience() {
       <div className="container mx-auto">
         <Tabs
           defaultValue="merchant"
-          className="flex flex-col xl:flex-row gap-[60px]"
+          className="flex flex-col items-center xl:flex-row gap-[60px] xl:items-start"
         >
           <TabsList className="flex flex-col w-full max-w-[300px] mx-auto xl:mx-0 gap-6">
             {experience(translate).items.map((project, idx) => (
@@ -95,23 +95,22 @@ function Experience() {
               </TabsTrigger>
             ))}
           </TabsList>
-          <div className="m-h-[70vh] w-full">
+          <div className="m-h-[70vh] w-fit-content">
             {experience(translate).items.map((project, idx) => (
-              <TabsContent value={project.id} key={idx} className="">
+              <TabsContent value={project.id} key={idx}>
                 <div className="inline-flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-accent h3">{project.name}</h3>
+                  <h2 className="text-accent h2">{project.name}</h2>
 
                   <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
-
                     <div>
-                      <p>{translate("tasks")}</p>
+                      <h3 className="h3 mb-2">{translate("tasks")}</h3>
                       {project.job.map((des, idx) => (
                         <p className="text-base leading-7 max-w-[600px] text-white/60 mx-auto xl:mx-0 p-6 bg-[#232329] rounded-md" key={idx}>{`${des}`}</p>
                       ))}
 
                     </div>
                     <div className="flex flex-col">
-                      <p>{translate("technologies")}</p>
+                      <h3 className="h3 mb-2">{translate("technologies")}</h3>
 
                       <p className="text-base leading-7 max-w-[600px] text-white/60 mx-auto xl:mx-0 p-6 bg-[#232329] rounded-md w-full mb-4" key={idx}>{`${project.techs}`}</p>
                       <div className="flex gap-4 bg-[#232329] p-4">

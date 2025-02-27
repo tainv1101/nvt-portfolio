@@ -1,6 +1,8 @@
 import { JetBrains_Mono } from "next/font/google"
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+//use for server component or outside component
+// import { getTranslations } from 'next-intl/server';
 import "../globals.css"
 
 const jetbrainMono = JetBrains_Mono({
@@ -28,6 +30,9 @@ export default async function LocaleLayout({
   // side is the easiest way to get started
   const messages = await getMessages();
   const { locale } = await params
+
+  // translate for server component if want
+  // const translate = await getTranslations("HomePage")
 
   return (
     <html lang={locale} suppressHydrationWarning >
