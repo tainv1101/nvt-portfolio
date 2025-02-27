@@ -1,9 +1,9 @@
 
 //components
-import Header from "@/components/layout/locale-layout/Header";
-import PageTransition from "@/components/layout/locale-layout/PageTransition";
-import StairsTransition from "@/components/layout/locale-layout/StairsTransition";
 
+import Header from "@/components/layout/locale-layout/Header";
+import PageTransition from "@/components/PageTransition";
+import StairsTransition from "@/components/StairsTransition";
 
 export const metadata = {
   title: "Tai Portfolio",

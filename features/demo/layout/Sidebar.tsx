@@ -1,7 +1,6 @@
 "use client"
 import { FaWpforms, FaInfinity } from "react-icons/fa6";
-import { SiReactquery, SiLazyvim } from "react-icons/si";
-import { BiSolidMemoryCard } from "react-icons/bi";
+import { SiLazyvim } from "react-icons/si";
 import { IoExitOutline } from "react-icons/io5";
 import {
   Sidebar,
@@ -19,25 +18,36 @@ import {
   // SidebarMenuSubButton,
   // SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
-import { Link } from "@/i18n/routing";
+import { Link, usePathname } from "@/i18n/routing";
+import { cn } from "@/lib/utils";
+// import { AppRoutes } from "@/lib/appRoutes";
+import { useCallback } from "react";
 
 // Menu items.
 const items = [
   {
-    title: "Form",
+    title: "Introduction",
+    // url: AppRoutes.introduction.href,
+    url: "#",
+    icon: FaWpforms,
+  },
+  // {
+  //   title: "React-query",
+  //   url: AppRoutes.reactQuery.href,
+  //   icon: SiReactquery,
+  // },
+  {
+    title: "Use Form Hook + Zod",
+    // url: AppRoutes.form.href,
     url: "#",
     icon: FaWpforms,
   },
   {
-    title: "React-query",
+    title: "Permission",
     url: "#",
-    icon: SiReactquery,
+    icon: IoExitOutline,
   },
-  {
-    title: "Catching",
-    url: "#",
-    icon: BiSolidMemoryCard,
-  },
+
   {
     title: "Lazy loading",
     url: "#",
@@ -52,15 +62,28 @@ const items = [
 
 export function AppSidebar() {
   // collapsible="offcanvas | icon | none"
+  const pathName = usePathname()
+  const checkActive = useCallback((url: string) => {
+    if (pathName === url) {
+      return true
+    }
+    return false
+  }, [pathName])
+
   return (
-    <Sidebar variant="inset" collapsible="icon">
+    <Sidebar variant="inset" collapsible="icon" className="border-b-2 border-black">
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Nguyễn Văn Tài</SidebarGroupLabel>
+          <SidebarGroupLabel>Demo menu</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
+                <SidebarMenuItem className={cn(
+                  // checkActive(item.url) && "active"
+                  "border-b-2 border-primary",
+                  checkActive(item.url) && "bg-primary text-white"
+
+                )} key={item.title}>
                   <SidebarMenuButton asChild>
                     {/* <div onClick={() => router.push("/demo?form")}>
                       <item.icon />

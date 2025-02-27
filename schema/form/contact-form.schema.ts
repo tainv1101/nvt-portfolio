@@ -1,5 +1,6 @@
 import * as z from "zod";
 
+// from with translate fc
 export function getContactFormSchema(translate?: (key: string) => string) {
   return z.object({
     name: z.string().min(2, {

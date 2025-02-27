@@ -22,6 +22,29 @@ export const AppRoutes = {
   experience: {
     href: "/experience",
     renderUrl: () => AppRoutes.experience.href
+  },
+
+  //Demo group
+
+  introduction: {
+    href: "/demo",
+    renderUrl: () => AppRoutes.introduction.href
+  },
+
+  reactQuery: {
+    href: "/react-query",
+    renderUrl: () => AppRoutes.reactQuery.href
+  },
+
+  permission: {
+    href: "/permission",
+    renderUrl: () => AppRoutes.permission.href
+  },
+
+  form: {
+    href: "/form",
+    renderUrl: () => AppRoutes.form.href
   }
+
 
 }
