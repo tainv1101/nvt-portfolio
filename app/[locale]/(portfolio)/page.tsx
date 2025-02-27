@@ -1,13 +1,15 @@
 // "use client";
 // import { useTranslations } from "next-intl";
 import { getTranslations } from 'next-intl/server';
+import Image from "next/image"
 
 // component
-import Socials from "@/components/home/Socials";
+
 import { cn } from "@/lib/utils";
-import Photo from "@/components/home/Photo";
-import Stats from "@/components/home/Stats";
-import DownLoadCVBtn from '@/components/home/DownLoadCVBtn';
+import DownLoadCVBtn from '@/features/home/components/DownLoadCVBtn';
+import Socials from '@/features/home/components/Socials';
+import Stats from '@/features/home/components/Stats';
+
 
 export default async function Home() {
   const translate = await getTranslations("HomePage")
@@ -40,13 +42,24 @@ export default async function Home() {
           </div>
 
           {/* Right block */}
-          <div>
-            <Photo />
-          </div>
-
+          <Photo />
         </div>
         <Stats />
       </div>
     </section>
+  )
+}
+
+
+function Photo() {
+  return (
+    <div className="relative mb-14 xl:mb-0 size-[250px] xl:size-[500px] rounded-full overflow-hidden">
+      <Image
+        src={"/assets/imgs/cv.jpg"}
+        fill
+        alt=""
+        className="object-cover"
+      />
+    </div>
   )
 }
