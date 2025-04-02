@@ -5,7 +5,7 @@
 
 @layer base {
   body{
-    @apply font-primary bg-primary text-white leading-loose;
+    @apply font-primary bg-primary text-white;
   }
 
   .h1{
@@ -26,6 +26,32 @@
   .text-outline-hover{
     -webkit-text-stroke: 1px #00ff99;
   }
+
+  .required {
+    @apply after:text-red-500  after:content-['*'] after:ml-0.5;
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    padding: 20px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #f7f4ed;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #e0cbcb;
+    border-radius: 100vh;
+    border: 3px solid #f6f7ed;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #c0a0b9;
+  }
+
   :root {
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;

@@ -6,14 +6,7 @@ export const routing = defineRouting({
   locales: ["vi", "en"],
 
   // Used when no locale matches
-  defaultLocale: "vi",
-  // pathnames: {
-  //   "/contact": {
-  //     en: "/contact-me",
-  //     fr: "/contactez-moi",
-  //     de: "/kontaktiere-mich",
-  //   },
-  // },
+  defaultLocale: "en",
 });
 
 // Lightweight wrappers around Next.js' navigation APIs

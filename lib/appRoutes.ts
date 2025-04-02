@@ -13,38 +13,50 @@ export const AppRoutes = {
     href: "/resume",
     renderUrl: () => AppRoutes.resume.href
   },
-
-  demo: {
-    href: "/demo",
-    renderUrl: () => AppRoutes.demo.href
-  },
-
   experience: {
     href: "/experience",
     renderUrl: () => AppRoutes.experience.href
   },
 
-  //Demo group
+  
+  //Practice group
+  form: {
+    href: "/practice/form",
+    renderUrl: () => AppRoutes.form.href
+  },
 
-  introduction: {
-    href: "/demo",
-    renderUrl: () => AppRoutes.introduction.href
+  practice: {
+    href: "/practice/form",
+    renderUrl: () => AppRoutes.practice.href
   },
 
   reactQuery: {
-    href: "/react-query",
+    href: "/practice/react-query",
     renderUrl: () => AppRoutes.reactQuery.href
   },
 
-  permission: {
-    href: "/permission",
-    renderUrl: () => AppRoutes.permission.href
+  // permission: {
+  //   href: "/practice/permission",
+  //   renderUrl: () => AppRoutes.permission.href
+  // },
+
+  virtualizedInfiniteScrolling: {
+    href: "/practice/virtualized-infinite-scrolling",
+    renderUrl: () => AppRoutes.virtualizedInfiniteScrolling.href
   },
 
-  form: {
-    href: "/form",
-    renderUrl: () => AppRoutes.form.href
-  }
+  framerMotion: {
+    href: "/practice/framer-motion",
+    renderUrl: () => AppRoutes.framerMotion.href
+  },
 
+  gsap: {
+    href: "/practice/gsap",
+    renderUrl: () => AppRoutes.gsap.href
+  },
 
+  serverSideRendering: {
+    href: "/practice/server-side-rendering",
+    renderUrl: () => AppRoutes.serverSideRendering.href
+  },
 }
