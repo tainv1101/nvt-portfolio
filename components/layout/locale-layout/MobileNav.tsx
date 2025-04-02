@@ -32,8 +32,8 @@ const links = (translate: (key: string) => string) => [
   //   path: AppRoutes.info.href
   // },
   {
-    name: translate("demo"),
-    path: AppRoutes.demo.href
+    name: translate("practice"),
+    path: AppRoutes.practice.href
   },
 ]
 const MobileNav = () => {
