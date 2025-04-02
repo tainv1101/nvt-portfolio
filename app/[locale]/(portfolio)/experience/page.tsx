@@ -4,7 +4,7 @@ import { BiLogoTypescript as TypeScript, BiLogoTailwindCss as TailwindCSS } from
 import { SiNextdotjs as NextJS, SiRemix as Remix } from "react-icons/si";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
 const getTechIcon = (tech: string): React.ReactNode => {
