@@ -2,15 +2,28 @@
 import AutoSizer from "react-virtualized-auto-sizer";
 import InfiniteLoader from "react-window-infinite-loader"
 import { VariableSizeList } from 'react-window';
-import { useCallback, useRef } from "react";
+import { useCallback, useRef, useState } from "react";
 import UserCard from "../UserCard";
+import UserService from "../../service/User.service";
 
-interface UsersProps {
-  users: Array<(Record<string, string> & { email: string }) | undefined>;
-  fetchMoreUsers: () => Promise<void>;
-  hasMore: boolean;
-}
-function Users({ users, fetchMoreUsers, hasMore }: UsersProps) {
+function Users() {
+  const [users, setUsers] = useState<Array<(Record<string, string> & { email: string }) | undefined>>([]);
+  const [page, setPage] = useState(1);
+  const [hasMore, setHasMore] = useState(true);
+  const fetchMoreUsers = async () => {
+    const res = await UserService.getUsers({ page: page, results: 10 });
+    const data = res.data.results
+
+    // Check when no more data
+    if (!data.length) {
+      setUsers((prev) => [...prev, undefined]);
+
+      return setHasMore(false);
+    }
+    setUsers((prev) => [...prev, ...data]);
+    setPage((prev) => prev + 1);
+  };
+
   const sizeMap = useRef<Record<number, number>>({}); // Lưu kích thước từng item
   const listRef = useRef<VariableSizeList>(null); // Tham chiếu danh sách
 
