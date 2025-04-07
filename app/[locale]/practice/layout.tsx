@@ -19,7 +19,6 @@ function Layout({ children }: { children: React.ReactNode }) {
     </main>
     {/* </main> */}
   </SidebarProvider>
-  )
 }
 
 export default Layout
