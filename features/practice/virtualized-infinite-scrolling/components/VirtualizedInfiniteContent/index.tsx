@@ -23,7 +23,7 @@ function VirtualizedInfiniteContent() {
   };
 
   return (
-    <div className="flex justify-center mx-auto p-5">
+    <div className="flex justify-center mx-auto">
       <div className="flex flex-col gap-4 2xl:flex-row 2xl:gap-10">
         <ModuleIntroduction />
         <Users users={users} fetchMoreUsers={fetchMoreUsers} hasMore={hasMore} />
