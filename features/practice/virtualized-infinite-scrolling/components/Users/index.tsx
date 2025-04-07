@@ -27,7 +27,7 @@ function Users({ users, fetchMoreUsers, hasMore }: UsersProps) {
 
   return (
     <div className="p-4 border rounded-md">
-      <div>
+      <div className="border-b pb-3">
         <h4 className="text-lg font-bold">User List: </h4>
         <div className="flex gap-4">
           <span>Total User: {hasMore ? users.length : users.length - 1}</span>
@@ -36,8 +36,8 @@ function Users({ users, fetchMoreUsers, hasMore }: UsersProps) {
         </div>
       </div>
 
-      <AutoSizer disableWidth style={{ height: "65vh", padding: "16px 0", overflow: "hidden" }} className="xl:w-[450px] w-full">
-        {({ height }) => (
+      <AutoSizer disableWidth style={{ height: "700px" }} className="xl:w-[450px] w-full">
+        {({ }) => (
           <InfiniteLoader
             isItemLoaded={isItemLoaded}
             itemCount={hasMore ? users.length + 1 : users.length}
@@ -46,13 +46,14 @@ function Users({ users, fetchMoreUsers, hasMore }: UsersProps) {
             {({ onItemsRendered }) => (
               <>
                 <VariableSizeList
-                  height={height}
+                  height={700}
                   width="100%"
                   itemCount={hasMore ? users.length + 1 : users.length}
                   itemSize={getSize}
                   onItemsRendered={onItemsRendered}
                   useIsScrolling
                   itemData={users}
+                  style={{ overflow: "auto" }}
                 >
                   {({ index, style, data, isScrolling }) =>
                     hasMore && !data[index] ? <Loader /> :

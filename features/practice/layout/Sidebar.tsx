@@ -43,14 +43,14 @@ const items = [
     icon: FaInfinity,
   },
   {
+    title: "Server side rendering",
+    url: AppRoutes.serverSideRendering.href,
+    icon: IoServer,
+  },
+  {
     title: "(Updating) React-query",
     url: AppRoutes.reactQuery.href,
     icon: SiReactquery,
-  },
-  {
-    title: "(Updating) Server side rendering",
-    url: AppRoutes.serverSideRendering.href,
-    icon: IoServer,
   },
   {
     title: "(Updating) Animation - Gsap",
@@ -62,17 +62,9 @@ const items = [
     url: AppRoutes.framerMotion.href,
     icon: MdAnimation,
   },
-
-
-  // {
-  //   title: "(Updating) Caching",
-  //   url: "#",
-  //   icon: IoSave,
-  // },
 ]
 
 export function AppSidebar() {
-  // collapsible="offcanvas | icon | none"
   const pathName = usePathname()
   const checkActive = useCallback((url: string) => {
     if (pathName === url) {
