@@ -1,7 +1,6 @@
 import { AppSidebar } from "@/features/practice/layout/Sidebar"
 import { SidebarProvider } from "@/components/ui/sidebar"
 import DemoHeader from "@/features/practice/layout/DemoHeader";
-import ReactQueryProvider from "@/components/ReactQueryProvider";
 
 function Layout({ children }: { children: React.ReactNode }) {
   <SidebarProvider className="bg-white">
@@ -11,15 +10,12 @@ function Layout({ children }: { children: React.ReactNode }) {
       <div className="size-full space-y-8">
         <DemoHeader />
         <div className="container max-auto">
-          <ReactQueryProvider>
-            {children}
-          </ReactQueryProvider>
+          {children}
         </div>
       </div>
     </main>
     {/* </main> */}
   </SidebarProvider>
-  )
 }
 
 export default Layout
