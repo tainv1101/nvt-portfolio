@@ -1,14 +1,13 @@
 // import { useQuery } from "@tanstack/react-query";
 
+import ReactQueryProvider from "@/components/ReactQueryProvider";
+import ArticleList from "@/features/practice/react-query/components/ArticleList";
+
 function ReactQuery() {
-  // const query = useQuery({
-  //   queryKey: ["react-query"],
-  //   queryFn: () => fetch("https://jsonplaceholder.typicode.com/posts/1").then((res) => res.json())
-  // })
   return (
-    <div>
-      <h3 className="h3">React Query module is coming soon...</h3>
-    </div>
+    <ReactQueryProvider>
+      <ArticleList />
+    </ReactQueryProvider>
   )
 }
 

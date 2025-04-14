@@ -23,7 +23,7 @@ const UserCard = <T extends { email: string } & Record<string, any>>({ data, ind
 
   return (
     <article ref={cardRef} style={{ ...style }}>
-      <div className="flex items-start p-2 m-2 gap-3 border border-gray-200 rounded-md xl:max-w-[440px] max-w-full">
+      <div className="flex items-start p-2 m-2 gap-3 border border-gray-200 rounded-md w-full max-w-full">
         <div className="relative xl:min-w-24 xl:min-h-24 xl:max-w-24 xl:max-h-24 min-h-12 min-w-12 max-w-12 max-h-12 rounded-full overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -36,7 +36,7 @@ const UserCard = <T extends { email: string } & Record<string, any>>({ data, ind
         {/* infomation */}
         <div className="flex flex-col gap-2 w-full overflow-hidden">
           <div className="flex flex-col">
-            <span className="xl:text-lg text-base text-ellipsis leading-0 font-semibold">{`#${index} ${userDetail?.name?.first} ${userDetail?.name?.last}`}</span>
+            <span className="xl:text-lg text-base text-ellipsis leading-0 font-semibold max-w-full overflow-hidden max-h-7">{`#${index} ${userDetail?.name?.first} ${userDetail?.name?.last}`}</span>
             <span className="text-xs">{userDetail?.email}</span>
           </div>
 

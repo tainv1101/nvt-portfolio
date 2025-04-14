@@ -15,3 +15,9 @@ export function truncateString(str: string = "", maxLength: number) {
   }
   return str;
 }
+
+export function convertObjectToObjectString( input: Record<string, any>) {
+  return Object.fromEntries(
+    Object.entries(input).map(([key, value]) => [key, String(value)])
+  );
+}
