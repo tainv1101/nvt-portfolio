@@ -39,7 +39,7 @@ function Users() {
   const isItemLoaded = useCallback((index: number) => index < users.length, [users]);
 
   return (
-    <div className="p-4 border rounded-md">
+    <div className="p-4 border rounded-md w-full">
       <div className="border-b pb-3">
         <h4 className="text-lg font-bold">User List: </h4>
         <div className="flex gap-4">
@@ -49,7 +49,7 @@ function Users() {
         </div>
       </div>
 
-      <AutoSizer disableWidth style={{ height: "700px" }} className="xl:w-[450px] w-full">
+      <AutoSizer disableWidth style={{ height: "700px" }} className="w-full">
         {({ }) => (
           <InfiniteLoader
             isItemLoaded={isItemLoaded}

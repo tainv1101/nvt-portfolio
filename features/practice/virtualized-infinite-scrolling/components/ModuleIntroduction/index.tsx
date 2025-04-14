@@ -31,7 +31,7 @@ const API = [
 ]
 function ModuleIntroduction() {
   return (
-    <div className="rounded-md border p-4 xl:min-w-[480] max-w-[500px] xl:h-full space-y-4">
+    <div className="rounded-md border p-4 w-full xl:h-full space-y-4">
       <h4 className="text-lg font-bold">Virtualized Infinite Scrolling Detail:</h4>
 
       <div className=" space-y-2">
