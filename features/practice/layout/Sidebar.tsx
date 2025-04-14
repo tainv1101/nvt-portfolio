@@ -48,7 +48,7 @@ const items = [
     icon: IoServer,
   },
   {
-    title: "(Updating) React-query",
+    title: "React-query",
     url: AppRoutes.reactQuery.href,
     icon: SiReactquery,
   },

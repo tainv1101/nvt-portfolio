@@ -1,6 +1,7 @@
 import { JetBrains_Mono } from "next/font/google"
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+import { Toaster } from "@/components/ui/sonner"
 //use for server component or outside component
 // import { getTranslations } from 'next-intl/server';
 import "../globals.css"
@@ -36,9 +37,11 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning >
+      {/* <link rel="icon" href="/assets/images/favicon.png" sizes="any" /> */}
       <body className={jetbrainMono.variable}>
         <NextIntlClientProvider messages={messages}>
           {children}
+          <Toaster />
         </NextIntlClientProvider>
       </body>
     </html>
