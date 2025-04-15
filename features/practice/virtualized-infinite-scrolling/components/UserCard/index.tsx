@@ -22,7 +22,7 @@ const UserCard = <T extends { email: string } & Record<string, any>>({ data, ind
   if (!!data.length && !userDetail) return <div style={style} className="flex justify-center pt-6">No data to fetch</div>
 
   return (
-    <article ref={cardRef} style={{ ...style }}>
+    <article ref={cardRef} style={style}>
       <div className="flex items-start p-2 m-2 gap-3 border border-gray-200 rounded-md w-full max-w-full">
         <div className="relative xl:min-w-24 xl:min-h-24 xl:max-w-24 xl:max-h-24 min-h-12 min-w-12 max-w-12 max-h-12 rounded-full overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
