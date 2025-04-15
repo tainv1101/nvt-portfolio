@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 function StepFormLayout({ handleSubmit, isValid, onBackStep, submitButtonLable = "Submit", backButtonLable = "Back", children }: { handleSubmit: () => void, isValid: boolean, submitButtonLable?: string, onBackStep?: () => void, backButtonLable?: string, children: React.ReactNode }) {
-  console.log("!!!StepFormLayout", isValid)
   return (
     <form className="mr-2 sapce-y-6" onSubmit={handleSubmit}>
       {children}
