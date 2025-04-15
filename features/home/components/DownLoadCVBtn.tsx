@@ -6,7 +6,7 @@ const DownLoadCVBtn = () => {
 
   const handleDownload = () => {
     const files = [
-      { name: "NguyenVanTaiCV-VN.pdf", url: "/assets/files/pdf/NguyenVanTaiCV-VN.pdf" },
+      { name: "NguyenVanTai_FrontendDeveloper.pdf", url: "/assets/files/pdf/NguyenVanTai_FrontendDeveloper.pdf" },
     ];
 
     files.forEach((file) => {
