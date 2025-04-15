@@ -68,7 +68,7 @@ function ArticleList() {
 
         </Masonry>
       </ResponsiveMasonry>
-      {isFetching && <div className="w-full py-2 flex justify-center animate-spin"><Loader /></div>}
+      {isFetching && <div className="w-full py-2 flex justify-center"><Loader className="animate-spin" /></div>}
     </div>
   )
 }
