@@ -70,9 +70,7 @@ function Users() {
                 >
                   {({ index, style, data, isScrolling }) =>
                     hasMore && !data[index] ? <Loader /> :
-                      <>
-                        <UserCard isScrolling={isScrolling} data={data} index={index} setSize={setSize} style={style} />
-                      </>
+                      <UserCard isScrolling={isScrolling} data={data} index={index} setSize={setSize} style={{ ...style, width: "calc(100% - 16px)" }} />
                   }
                 </VariableSizeList>
               </>

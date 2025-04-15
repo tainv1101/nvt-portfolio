@@ -46,7 +46,8 @@ async function ServerSideRendering({ params }: { params: Promise<{ page: string 
 
 const EmailList = ({ data }: { data: ({ email: string } & Record<string, string>)[] }) => {
   return (
-    <ul className='space-y-2 border rounded-md p-4 h-[75vh] w-full overflow-y-hidden'>
+    <ul className='relative space-y-2 w-full overflow-y-auto border rounded-md px-4 pb-4 h-[75vh]'>
+      <h3 className="sticky bg-white top-0 pt-4 text-lg font-semibold">Navigate to a other page and come back here to load new data</h3>
       {data.map((data, index) => (
         <li className='p-2 text-ellipsis' key={data.email}>#{index + 1} {data.email}</li>
       ))}
@@ -56,8 +57,8 @@ const EmailList = ({ data }: { data: ({ email: string } & Record<string, string>
 
 const ServerSideRenderingDocs = () => {
   return (
-    <div className='space-y-4 p-4 border rounded-md h-[75vh] w-full overflow-y-auto'>
-      <h3 className='h3'>Rendering Strategies in Next.js</h3>
+    <div className='space-y-4 p-4 border rounded-md h-[75vh] w-full overflow-y-auto leading-5'>
+      <h3 className="text-lg font-semibold">Rendering Strategies in Next.js</h3>
 
       <p>
         Next.js supports multiple rendering strategies to deliver content efficiently:
@@ -114,7 +115,7 @@ export default function Home({ data }) {
 
       {/* SSG */}
       <div className='space-y-2'>
-        <h3 className='h3'># Static Site Generation (SSG)</h3>
+        <strong># Static Site Generation (SSG)</strong>
         <div className='space-y-1'>
           <p>
             SSG allows you to pre-render pages at build time. It’s ideal for pages with data that doesn’t change often.
