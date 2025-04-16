@@ -12,13 +12,13 @@ function Header() {
   const translate = useTranslations("Header")
   return (
     <header>
-      <div className="py-8 xl:py-12 text-white">
+      <div className="py-8 xl:py-10 border-b-[1px] border-primary">
         <div className="container mx-auto flex justify-between items-center">
           <Link href={AppRoutes.home.href}>
-            <h1 className="text-4xl font-semibold">{translate("my_name")}</h1>
+            <h1 className="text-xl lg:text-4xl font-semibold hover:text-accent">{translate("my_name")}</h1>
           </Link>
 
-          {/* destop nave */}
+          {/* destop nav */}
           <div className="hidden xl:flex">
             <Nav />
           </div>
@@ -27,7 +27,7 @@ function Header() {
           <div className="xl:hidden">
             <MobileNav />
           </div>
-          <div className="hidden xl:block">
+          <div className="">
             <LocaleSwitcherSelect />
           </div>
         </div>

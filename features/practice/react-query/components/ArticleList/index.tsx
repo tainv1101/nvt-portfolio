@@ -42,7 +42,6 @@ function ArticleList() {
 
   const { ref, inView } = useInView();
 
-  console.log(data)
   useEffect(() => {
     if (inView) {
       toast(`Fetching page: ${data?.pageParams?.length || 0}`)
