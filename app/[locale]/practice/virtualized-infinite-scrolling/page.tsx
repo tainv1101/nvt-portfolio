@@ -1,6 +1,9 @@
 import ModuleIntroduction from "@/features/practice/virtualized-infinite-scrolling/components/ModuleIntroduction";
 import Users from "@/features/practice/virtualized-infinite-scrolling/components/Users";
 
+export const metadata = {
+  title: "Practice | Virtualized Infinite Scrolling",
+};
 function VirtualizedInfiniteScrolling() {
   return (
     <div className="flex justify-center mx-auto">

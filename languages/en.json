@@ -35,19 +35,22 @@
 
     "over_1_year": "Over 1 year",
     "my_experience": "My experience",
-    "membee_merchant_job_1": "Maintain the website and add new features",
-    "membee_merchant_job_2": "Build UI/UX based on Figma designs by ReactJS and NextJS",
-    "membee_merchant_job_3": "Create shared components",
-    "membee_merchant_job_4": "Integrate API",
+    "membee_merchant_job_1": "Develop new features based on project requirements.",
+    "membee_merchant_job_2": "Update, optimize, and fix bugs to improve performance and stability.",
+    "membee_merchant_job_3": "Collaborate with back-end developers to integrate APIs effectively.",
+    "membee_merchant_job_4": "Work closely with designers and BA to build user interfaces and functionalities that align with requirements.",
 
-    "membee_zalo_job_1": "Developed the frontend of the website using ReactJS and TypeScript",
-    "membee_zalo_job_2": "Build UI/UX based on Figma designs",
-    "membee_zalo_job_3": "Integrate Membee API and Zalo Mini App API",
+    "membee_zalo_job_1": "Researched Zalo Mini App CLI, Zalo Mini App API, and Zalo Components to understand the development ecosystem.",
+    "membee_zalo_job_2": "Integrated Membee API and Zalo Mini App API to enable seamless data exchange and enhance the overall user experience within the application.",
+    "membee_zalo_job_3": "Collaborated with design and backend teams to translate UI/UX designs into functional interfaces and ensure efficient API integration.",
+    "membee_zalo_job_4": "Implemented client-side logic and data handling to deliver a smooth and interactive experience.",
 
-    "membee_shopify_job_1": "Developed the frontend of the website using ReactJS and Remix",
-    "membee_shopify_job_2": "Use Shopify Polaris design system to build UI/UX based on Figma designs",
-    "membee_shopify_job_3": "Integrate Membee API and Shopify API",
+    "membee_shopify_job_1": "Researched Remix, Shopify Polaris, and the process of building Shopify apps within the admin dashboard.",
+    "membee_shopify_job_2": "Collaborated with the back-end team to integrate Membee API and Shopify API.",
+    "membee_shopify_job_3": "Worked with the design team to build a UI that aligns with Shopify Polaris design guidelines.",
+    "membee_shopify_job_4": "Developed reusable components to ensure consistency and improve development efficiency.",
+
     "technologies": "Technologies",
-    "tasks": "Tasks"
+    "responsibilities": "Responsibilities"
   }
 }

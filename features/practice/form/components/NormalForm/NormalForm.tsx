@@ -230,7 +230,7 @@ function Normal() {
       <div className="flex justify-end">
         <button
           type="submit"
-          className={`bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600  mt-8 flex items-center justify-center transition-all ${isSubmitting && "animate-pulse"}`}
+          className={`bg-primary text-white py-2 px-4 rounded-md hover:scale-105  mt-8 flex items-center justify-center transition-all ${isSubmitting && "animate-pulse"}`}
           disabled={isSubmitting}
           onClick={handleSubmit(onSubmit)}
         >
