@@ -33,9 +33,9 @@ export default function LocaleSwitcherSelect() {
   return (
     <Select defaultValue={locale} onValueChange={onSelectChange}>
       <SelectTrigger
-        className='w-[80px] h-8 border-none bg-transparent focus:ring-0 focus:ring-offset-0'
+        className='w-[80px] h-8 border-none bg-transparent focus:ring-0 focus:ring-offset-0 '
       >
-        <div className="flex items-center gap-1 border rounded-md px-4 py-1">
+        <div className="flex items-center gap-1 border rounded-md px-4 py-1 hover:bg-accent hover:text-primary">
           <Globe className='h-4 w-4 text-muted-foreground' />
           <SelectValue />
         </div>

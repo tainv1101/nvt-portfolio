@@ -22,8 +22,8 @@ export default {
 				"demo-subtext": "rgb(113, 113, 122)",
   			primary: '#1c1c22',
   			accent: {
-  				DEFAULT: '#00ff99',
-  				hover: '#00e187'
+  				DEFAULT: '#FF8533',
+  				hover: '#FF6D00'
   			},
   			sidebar: {
   				DEFAULT: 'hsl(var(--sidebar-background))',

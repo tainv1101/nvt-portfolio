@@ -71,7 +71,7 @@ function ZodForm() {
                   {...register("isWorkExperience")}
                   className="hidden peer"
                 />
-                <div className="w-5 h-5 border-2 border-gray-500 rounded-md peer-checked:border-blue-500 peer-checked:bg-blue-500 transition-all"></div>
+                <div className="w-5 h-5 border-2 border-gray-500 rounded-md peer-checked:border-accent peer-checked:bg-primary transition-all"></div>
                 <span className="ml-2 capitalize">Work experience</span>
               </label>
 
@@ -92,7 +92,7 @@ function ZodForm() {
                   {...register("isKnowOtherLanguage")}
                   className="hidden peer"
                 />
-                <div className="w-5 h-5 border-2 border-gray-500 rounded-md peer-checked:border-blue-500 peer-checked:bg-blue-500 transition-all"></div>
+                <div className="w-5 h-5 border-2 border-gray-500 rounded-md peer-checked:border-accent peer-checked:bg-primary transition-all"></div>
                 <span className="ml-2 capitalize">Know other language</span>
               </label>
 
@@ -118,7 +118,7 @@ function ZodForm() {
                         {...register("educationLevel")}
                         className="hidden peer"
                       />
-                      <div className="w-5 h-5 border-2 border-gray-500 rounded-full peer-checked:border-blue-500 peer-checked:bg-blue-500 transition-all"></div>
+                      <div className="w-5 h-5 border-2 border-gray-500 rounded-full peer-checked:border-accent peer-checked:bg-primary transition-all"></div>
                       <span className="ml-2">{label}</span>
                     </label>
                   ))}
@@ -150,7 +150,7 @@ function ZodForm() {
       <div className="flex justify-end">
         <button
           type="submit"
-          className={`bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600  mt-8 flex items-center justify-center transition-all ${isSubmitting && "animate-pulse"}`}
+          className={`bg-primary text-white py-2 px-4 rounded-md hover:scale-105  mt-8 flex items-center justify-center transition-all ${isSubmitting && "animate-pulse"}`}
           disabled={isSubmitting}
           onClick={handleSubmit(onSubmit)}
         >

@@ -1,7 +1,6 @@
 "use client"
-
 import { AppRoutes } from "@/lib/appRoutes";
-import { Sheet, SheetContent, SheetTrigger } from "../../ui/sheet";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "../../ui/sheet";
 import { CiMenuFries } from "react-icons/ci";
 import { Link, usePathname } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
@@ -44,7 +43,9 @@ const MobileNav = () => {
       <SheetTrigger>
         <CiMenuFries />
       </SheetTrigger>
-      <SheetContent className="flex flex-col items-center">
+      <SheetContent className="flex flex-col items-center text-white">
+        {/* fix error digalog title is required */}
+        <SheetTitle className="sr-only">menu</SheetTitle>
         {links(translate).map((link, idx) => (
           <Link
             href={link.path}
