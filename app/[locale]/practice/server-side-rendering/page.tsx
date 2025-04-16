@@ -26,6 +26,10 @@
 
 // simply use SSR by create page component by async function
 // export const dynamic = 'force-static';
+
+export const metadata = {
+  title: "Practice | SSR",
+};
 async function ServerSideRendering({ params }: { params: Promise<{ page: string }> }) {
   const { page } = await params
   const queryString = new URLSearchParams({ page }).toString();

@@ -1,7 +1,9 @@
 
 import FormTabs from "@/features/practice/form/components/FormTabs";
+export const metadata = {
+  title: "Practice | Form",
+};
 export default function FormPage() {
-  console.log("FormPage");
   return (
     <div>
       <FormTabs />

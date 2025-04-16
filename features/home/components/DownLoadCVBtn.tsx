@@ -6,7 +6,7 @@ const DownLoadCVBtn = () => {
 
   const handleDownload = () => {
     const files = [
-      { name: "NguyenVanTai_FrontendDeveloper.pdf", url: "/assets/files/pdf/NguyenVanTai_FrontendDeveloper.pdf" },
+      { name: "NguyenVanTai_FrontendDeveloper.pdf", url: "/assets/files/pdf/CV_Nguyen_Van_Tai_Frontend_Developer.pdf" },
     ];
 
     files.forEach((file) => {
@@ -20,7 +20,7 @@ const DownLoadCVBtn = () => {
   };
 
   return (
-    <Button onClick={handleDownload} className="d-flex items-center gap-2 w-[220px]" size="lg" variant="outline">
+    <Button onClick={handleDownload} className="d-flex items-center gap-2 w-[220px] text-white" size="lg" variant="outline">
       <span>Download CV</span>
       <FiDownload />
     </Button>

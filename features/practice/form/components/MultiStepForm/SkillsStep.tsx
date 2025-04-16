@@ -30,7 +30,6 @@ function SkillStep({ setActiveStep }: { setActiveStep?: (activeStep: number) => 
   };
 
   const onBackStep = () => {
-    console.log("onBack");
     onChangeStep({ label: "infor", id: 0 });
     setActiveStep?.(0);
   };
