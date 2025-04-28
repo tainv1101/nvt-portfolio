@@ -1,5 +1,6 @@
 // import { useQuery } from "@tanstack/react-query";
 
+import Container from "@/components/Container";
 import ReactQueryProvider from "@/components/ReactQueryProvider";
 import ArticleList from "@/features/practice/react-query/components/ArticleList";
 export const metadata = {
@@ -8,7 +9,9 @@ export const metadata = {
 function ReactQuery() {
   return (
     <ReactQueryProvider>
-      <ArticleList />
+      <Container>
+        <ArticleList />
+      </Container>
     </ReactQueryProvider>
   )
 }
