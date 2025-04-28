@@ -1,4 +1,4 @@
-import { JetBrains_Mono } from "next/font/google"
+import { JetBrains_Mono } from "next/font/google";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { Toaster } from "@/components/ui/sonner"
@@ -24,7 +24,6 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
-
 
   // Ensure that the incoming `locale` is valid
   // Providing all messages to the client
