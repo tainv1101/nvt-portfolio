@@ -5,6 +5,7 @@ function Gsap() {
   return (
     <div>
       <Heros />
+      <div className="h-dvh"></div>
     </div>
   );
 }
