@@ -14,8 +14,7 @@ const TOTAL_VIDEO = 4;
 function Heros() {
   const [currentIdx, setCurrentIdx] = useState(1);
   const [hasClicked, setHasClicked] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [loadedVideos, setLoadedVideos] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   const bgVideoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const nextVideoRef = useRef<HTMLVideoElement>(null);
@@ -24,13 +23,6 @@ function Heros() {
   const upcomingVideoIdx = (currentIdx % TOTAL_VIDEO) + 1;
 
   const getVideoSrc = (idx: number) => `/assets/videos/hero-${idx}.mp4`;
-
-  const handleVideoLoad = () => {
-    setLoadedVideos((prev) => {
-      const next = prev + 1;
-      return next > 6 ? 6 : next;
-    });
-  };
 
   const handleClick = () => {
     if (hasClicked || isAnimatingRef.current) return;
@@ -79,17 +71,29 @@ function Heros() {
         start: "40% 45%",
         end: "bottom center",
         scrub: true,
-        markers: false,
         pin: false,
       },
     });
   }, []);
 
   useEffect(() => {
-    if (loadedVideos >= 4) {
-      setIsLoading(false);
-    }
-  }, [loadedVideos]);
+    const interval = setInterval(() => {
+      const loaded = bgVideoRefs.current.filter(
+        (v) => v && v.readyState >= 3
+      ).length;
+
+
+      if (loaded >= 3) {
+        clearInterval(interval);
+        setIsLoading(false);
+      }
+    }, 200); // check mỗi 200ms
+
+    return () => clearInterval(interval);
+  }, []);
+
+
+
 
   return (
     <div className="size-full relative overflow-x-hidden">
@@ -113,7 +117,6 @@ function Heros() {
             key={idx}
             src={getVideoSrc(idx + 1)}
             ref={(el) => { if (el) bgVideoRefs.current[idx] = el }}
-            onLoadedData={handleVideoLoad}
             autoPlay
             loop
             muted
@@ -133,7 +136,6 @@ function Heros() {
               src={getVideoSrc(upcomingVideoIdx)}
               loop
               muted
-              onLoadedData={handleVideoLoad}
               className="size-64 origin-center scale-150 object-cover object-center"
             />
           </div>
@@ -145,7 +147,6 @@ function Heros() {
           src={getVideoSrc(upcomingVideoIdx)}
           loop
           muted
-          onLoadedData={handleVideoLoad}
           id="animate-video"
           className="absolute-center invisible absolute z-20 size-64 object-cover object-center"
         />
