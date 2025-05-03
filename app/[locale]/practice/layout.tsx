@@ -11,7 +11,6 @@ export const metadata = {
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-
       <SidebarProvider className="bg-white">
         <AppSidebar />
         <main className="relativebg-white size-full text-primary text-sm leading-snug">
