@@ -53,15 +53,15 @@ const items = [
     icon: SiReactquery,
   },
   {
-    title: "(Updating) Gsap - Animation",
+    title: "Gsap",
     url: AppRoutes.gsap.href,
     icon: MdAnimation,
   },
-  {
-    title: "(Updating) Framer motion - Animation",
-    url: AppRoutes.framerMotion.href,
-    icon: MdAnimation,
-  },
+  // {
+  //   title: "(Updating) Framer motion - Animation",
+  //   url: AppRoutes.framerMotion.href,
+  //   icon: MdAnimation,
+  // },
 ]
 
 export function AppSidebar() {

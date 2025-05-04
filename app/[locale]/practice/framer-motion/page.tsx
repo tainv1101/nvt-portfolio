@@ -1,8 +1,10 @@
+import Container from "@/components/Container";
+
 function FramerMotion() {
   return (
-    <div>
+    <Container>
       <h3 className="h3">Framer Motion module is coming soon...</h3>
-    </div>
+    </Container>
   );
 }
 

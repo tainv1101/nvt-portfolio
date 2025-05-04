@@ -10,22 +10,29 @@ function Users() {
   const [users, setUsers] = useState<Array<(Record<string, string> & { email: string }) | undefined>>([]);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
-  const fetchMoreUsers = async () => {
-    const res = await UserService.getUsers({ page: page, results: 10 });
-    const data = res.data.results
-
-    // Check when no more data
-    if (!data.length) {
-      setUsers((prev) => [...prev, undefined]);
-
-      return setHasMore(false);
-    }
-    setUsers((prev) => [...prev, ...data]);
-    setPage((prev) => prev + 1);
-  };
+  const [isErr, setErr] = useState<boolean>(false)
 
   const sizeMap = useRef<Record<number, number>>({}); // Lưu kích thước từng item
   const listRef = useRef<VariableSizeList>(null); // Tham chiếu danh sách
+
+  const fetchMoreUsers = async () => {
+    try {
+      const res = await UserService.getUsers({ page, results: 10 });
+      const data = res.data.results;
+
+      if (!data.length) {
+        setUsers((prev) => [...prev, undefined]);
+        setHasMore(false);
+        return;
+      }
+
+      setUsers((prev) => [...prev, ...data]);
+      setPage((prev) => prev + 1);
+    } catch {
+      setErr(true)
+      setHasMore(false);
+    }
+  };
 
   // Hàm đo kích thước thực tế của item
   const setSize = (index: number, size: number) => {
@@ -61,7 +68,7 @@ function Users() {
                 <VariableSizeList
                   height={700}
                   width="100%"
-                  itemCount={hasMore ? users.length + 1 : users.length}
+                  itemCount={hasMore ? users.length + 1 : users.length || 1}
                   itemSize={getSize}
                   onItemsRendered={onItemsRendered}
                   useIsScrolling
@@ -69,8 +76,9 @@ function Users() {
                   style={{ overflow: "auto" }}
                 >
                   {({ index, style, data, isScrolling }) =>
-                    hasMore && !data[index] ? <Loader /> :
-                      <UserCard isScrolling={isScrolling} data={data} index={index} setSize={setSize} style={{ ...style, width: "calc(100% - 16px)" }} />
+                    isErr ? <div className="h3 mt-4 w-full flex justify-center items-center h-12 text-red-500">API ERROR!</div>
+                      : hasMore && !data[index] ? <Loader /> :
+                        <UserCard isScrolling={isScrolling} data={data} index={index} setSize={setSize} style={{ ...style, width: "calc(100% - 16px)" }} />
                   }
                 </VariableSizeList>
               </>

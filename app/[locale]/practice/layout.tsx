@@ -11,14 +11,13 @@ export const metadata = {
 function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-
       <SidebarProvider className="bg-white">
         <AppSidebar />
-        <main className="relative pb-8 px-8 bg-white size-full text-primary text-sm leading-snug min-h-[100vh]">
-          <div className="size-full space-y-8">
+        <main className="relativebg-white size-full text-primary text-sm leading-snug">
+          <div className="size-full">
             {/* <ScrollPageProgress /> */}
             <DemoHeader />
-            <div className="container max-auto">
+            <div>
               <ReactQueryProvider>
                 {children}
               </ReactQueryProvider>

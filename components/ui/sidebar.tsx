@@ -18,6 +18,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import { useSibar } from "@/store/practice"
 
 const SIDEBAR_COOKIE_NAME = "sidebar_state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
@@ -265,6 +266,7 @@ const SidebarTrigger = React.forwardRef<
   React.ComponentProps<typeof Button>
 >(({ className, onClick, ...props }, ref) => {
   const { toggleSidebar } = useSidebar()
+  const setIsExpand = useSibar((state) => state.setIsExpand)
 
   return (
     <Button
@@ -275,6 +277,7 @@ const SidebarTrigger = React.forwardRef<
       className={cn("h-9 w-9", className)}
       onClick={(event) => {
         onClick?.(event)
+        setIsExpand()
         toggleSidebar()
       }}
       {...props}
