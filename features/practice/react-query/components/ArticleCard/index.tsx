@@ -1,8 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
-
-import { Skeleton } from "@/components/ui/skeleton";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import { useState } from "react";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface ArticleCardProps {
   data: {
@@ -17,24 +16,14 @@ function ArticleCard({ data }: ArticleCardProps) {
 
   return (
     <div className="w-full text-center hover:cursor-pointer">
-      <TooltipProvider delayDuration={500} key={data.id}>
-        <Tooltip>
-          <TooltipTrigger>
-            <img
-              src={data.url || "/assets/imgs/no-img.jpg"}
-              alt={data.id}
-              onLoad={() => setLoaded(true)}
-              className={`rounded-3xl w-full transition-opacity duration-700 ${loaded ? "opacity-100 block" : "opacity-0 hidden"
-                }`}
-            />
-            {!loaded && <Skeleton className="w-full h-80 animate-pulse" />}
-          </TooltipTrigger>
-          <TooltipContent>
-            <p>{data.id}</p>
-          </TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
-
+      <LazyLoadImage
+        effect="blur"
+        src={data.url || "/assets/imgs/no-img.jpg"}
+        alt={data.id}
+        onLoad={() => setLoaded(true)}
+        className='rounded-3xl w-full'
+      />
+      {!loaded && <Skeleton className="w-full h-80 rounded-3xl animate-pulse blur" />}
     </div>
   );
 }

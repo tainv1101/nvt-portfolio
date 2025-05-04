@@ -1,6 +1,8 @@
 // import UserService from '@/features/practice/virtualized-infinite-scrolling/service/User.service';
 // import { useState } from "react";
 
+import Container from "@/components/Container";
+
 //-->getServerSideProps cannot use in the new App Router (app/ directory) in Next.js 13+ <---
 
 // import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
@@ -31,19 +33,34 @@ export const metadata = {
   title: "Practice | SSR",
 };
 async function ServerSideRendering({ params }: { params: Promise<{ page: string }> }) {
-  const { page } = await params
+  const { page } = await params;
   const queryString = new URLSearchParams({ page }).toString();
 
-  const res: any = await fetch(`https://randomuser.me/api/?results=15&${queryString}`, { cache: "no-store" });
-  const json = await res.json();
-  const data: ({ email: string } & Record<string, string>)[] = json.results;
+  let data: ({ email: string } & Record<string, any>)[] = [];
+  let error: string | null = null;
+
+  try {
+    const res = await fetch(`https://randomuser.me/api/?results=15&${queryString}`, { cache: "no-store" });
+    const json = await res.json();
+    data = json.results;
+  } catch (err: any) {
+    console.error(err);
+    error = "API ERORR!";
+  }
+
   return (
-    <>
-      <div className='grid grid-cols-1 space-x-0 space-y-4 xl:grid-cols-2 xl:space-x-4 xl:space-y-0'>
+    <Container>
+      <div className="grid grid-cols-1 space-x-0 space-y-4 xl:grid-cols-2 xl:space-x-4 xl:space-y-0">
         <ServerSideRenderingDocs />
-        <EmailList data={data} />
+        {error ? (
+          <div className="h3 flex items-center justify-center p-8 text-center text-red-500">
+            {error}
+          </div>
+        ) : (
+          <EmailList data={data} />
+        )}
       </div>
-    </>
+    </Container>
   );
 }
 
