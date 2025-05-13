@@ -30,8 +30,14 @@
     src: url("/assets/fonts/zentry-regular.woff2") format("woff2");
   }
 
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
   body{
-    @apply font-primary bg-slate-100/10 text-primary;
+    @apply font-primary bg-slate-100/10 text-primary overflow-x-hidden;
   }
  
   .scrollbar::-webkit-scrollbar {
@@ -154,7 +160,7 @@
   }
 
   .zentry-animated-word {
-    @apply font-zentry font-black opacity-0;
+    @apply font-zentry font-black;
     transform: translate3d(10px, 51px, -60px) rotateY(60deg) rotateX(-40deg);
     transform-origin: 50% 50% -150px !important;
     will-change: opacity, transform;

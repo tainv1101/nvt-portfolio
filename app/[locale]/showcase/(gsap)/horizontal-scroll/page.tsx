@@ -30,7 +30,7 @@ const HorizontalScroll = () => {
   return (
     <div className="overflow-x-hidden">
       <div ref={containerRef} className="relative flex h-screen overflow-hidden">
-        {["Section 1"].map((text, index) => (
+        {["Section 1", "Section 2", "Section 3"].map((text, index) => (
           <div
             key={index}
             ref={(el) => {
