@@ -88,12 +88,6 @@ export default function ScrollPinBannerStackContent() {
             <p>{`"We dream, we build, we sometimes fall,`}</p>
             <p>{`But rising is where we find it all."`}</p>
           </div>
-
-          <div className="w-full">
-            <p>Nguyen Van Tai,</p>
-            <p>tainv369@gmail.com</p>
-            <p>081449952</p>
-          </div>
         </div>
       </div>
     </div>
