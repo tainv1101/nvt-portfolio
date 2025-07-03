@@ -1,20 +1,22 @@
 export const AppRoutes = {
+
+
   home: {
-    href: "/",
+    href: "/old-version/",
     renderUrl: () => AppRoutes.home.href
   },
 
   info: {
-    href: "/info",
+    href: "/old-version/info",
     renderUrl: () => AppRoutes.info.href
   },
 
   resume: {
-    href: "/resume",
+    href: "/old-version/resume",
     renderUrl: () => AppRoutes.resume.href
   },
   experience: {
-    href: "/experience",
+    href: "/old-version/experience",
     renderUrl: () => AppRoutes.experience.href
   },
 

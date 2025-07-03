@@ -20,7 +20,7 @@ const DownLoadCVBtn = () => {
   };
 
   return (
-    <Button onClick={handleDownload} className="d-flex items-center gap-2 w-[220px] text-white" size="lg" variant="outline">
+    <Button onClick={handleDownload} className="d-flex items-center gap-2 w-[220px] text-white hover:text-accent" size="lg" variant="outline">
       <span>Download CV</span>
       <FiDownload />
     </Button>

@@ -3,21 +3,21 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { cn } from "@/lib/utils";
-import { IdCard } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 interface ContentPanelProps {
   bgColorClass?: string,
   id: string,
-  spacing?: boolean | string | number,
+  spacingHeightClass?: boolean | string | number,
   children: React.ReactNode,
   pin?: boolean | string,
   height?: string,
   className?: React.HTMLAttributes<HTMLDivElement>["className"],
+  triggerHeightClass?: React.HTMLAttributes<HTMLDivElement>["className"]
 }
 
-function ContentPanel({ height, bgColorClass, id, spacing, children, pin = false, className }: ContentPanelProps) {
+function ContentPanel({ height, bgColorClass, id, spacingHeightClass, children, pin = false, className, triggerHeightClass }: ContentPanelProps) {
 
   useGSAP(() => {
     // content 1 animate
@@ -27,17 +27,19 @@ function ContentPanel({ height, bgColorClass, id, spacing, children, pin = false
         start: "top bottom",
         end: "bottom center",
         scrub: 1,
-        markers: true,
+        pin: pin,
+        pinSpacing: false,
       },
     });
 
     panel.to(`#${id}`, {
       x: 0,
-      // y: 0,
+      y: 0,
       margin: 0,
       rotation: 0,
       ease: "none",
     })
+    // .set(`#${id}`, { position: "sticky", top: 0 });
 
   }, {})
 
@@ -46,15 +48,11 @@ function ContentPanel({ height, bgColorClass, id, spacing, children, pin = false
 
     // <div className="relative">
     <>
-      {!!spacing && (
+      {!!spacingHeightClass && (
         <div
-          style={{
-            height: typeof spacing === "string" ? spacing : `${spacing}dvh`,
-          }}
-          className="spacer bg-transparent"
+          className={cn("spacer bg-transparent", spacingHeightClass)}
         />
       )}
-
       <section
         id={id}
         className={cn(
@@ -65,9 +63,9 @@ function ContentPanel({ height, bgColorClass, id, spacing, children, pin = false
 
         )}
       >
-        <div className={`panel__scroll__trigger_${id} bg-transparent absolute top-0 left-0 h-dvh]`} />
+        <div className={cn(`panel__scroll__trigger_${id} bg-transparent absolute top-0 left-0 h-screen w-screen]`, triggerHeightClass)} />
 
-        <div className="container h-full">
+        <div className="h-full">
           {children}
         </div>
       </section>

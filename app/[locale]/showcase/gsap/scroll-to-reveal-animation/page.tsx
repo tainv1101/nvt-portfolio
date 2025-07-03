@@ -82,9 +82,9 @@ function ScrolltriggerChoreography() {
 
   return (
     <div id="smooth-wrapper">
-      <div id="smooth-content relative">
-        <div className="animate-container relative" ref={containerRef}>
-          <section className="intro sticky top-0 h-svh w-vw p-12 overflow-hidden flex justify-center items-center">
+      <div id="smooth-content">
+        <div className="animate-container" ref={containerRef}>
+          <section className="intro h-svh w-vw p-12 overflow-hidden flex justify-center items-center">
             <h1 className="h1">Art is not what you see. It&apos;s what you  *feel* in the blur, the chaos, the motion - every pulse capture in color and form</h1>
           </section>
 

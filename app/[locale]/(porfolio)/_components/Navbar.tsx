@@ -1,4 +1,6 @@
 "use client";
+import { Link } from "@/i18n/routing";
+import { AppRoutes } from "@/lib/appRoutes";
 import React, { useState, useEffect, useRef } from "react";
 
 const Navbar = () => {
@@ -71,15 +73,20 @@ const Navbar = () => {
         position: "fixed",
         top: 0,
         width: "100%",
-        backgroundColor: "red",
-        color: "white",
         padding: "1rem",
         transition: "transform 0.3s ease-in-out",
         transform: visible ? "translateY(0)" : "translateY(-100%)",
         zIndex: 99,
       }}
+
+      className="bg-white/90 border-b border-gray-200 text-primary/80"
     >
-      Navbar
+      <div className="container flex gap-10">
+        <Link className="hover:text-accent" href={AppRoutes.home.href}>Old Version</Link>
+        <div>
+          <Link className="hover:text-accent" href={AppRoutes.form.href}>Practice</Link>
+        </div>
+      </div>
     </nav>
   );
 };
