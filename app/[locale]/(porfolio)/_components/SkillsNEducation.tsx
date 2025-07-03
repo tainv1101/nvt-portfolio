@@ -88,7 +88,6 @@ function SkillsAndEducation() {
               </div>
               <div className="flex items-end gap-2">
                 <SubsectionText text="GPA:" />
-
                 <p>3.11 / 4.0</p>
               </div>
             </div>
