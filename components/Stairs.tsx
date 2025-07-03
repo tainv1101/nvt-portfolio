@@ -1,15 +1,14 @@
-import { motion } from "motion/react"
+import { motion } from "framer-motion"
 
 const stairAnimation = {
   initial: {
-    top: "0%"
+    right: "0%",
   },
   animate: {
-    top: "100%"
-
+    right: "100%"
   },
   exit: {
-    top: ["100%", "0%"]
+    right: ["100%", "0%"]
   }
 }
 // calculated the reverse index 

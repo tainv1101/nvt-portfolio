@@ -4,3 +4,20 @@ import { twMerge } from "tailwind-merge"
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
+
+export function capitalizeString(str: string = "") {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+export function truncateString(str: string = "", maxLength: number) {
+  if (str.length > maxLength) {
+    return str.substring(0, maxLength - 3) + "...";
+  }
+  return str;
+}
+
+export function convertObjectToObjectString( input: Record<string, any>) {
+  return Object.fromEntries(
+    Object.entries(input).map(([key, value]) => [key, String(value)])
+  );
+}

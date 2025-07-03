@@ -5,8 +5,8 @@
     "front_end_developer": "Frontend Developer",
     "i_am": "Mình là",
     "my_name": "Nguyễn Văn Tài",
-    "experient": "Mình đã có hơn 1 năm kinh nghiệm lập trình frontend với React.js"
-
+    "slogan": "Cuộc sống không phải là chờ đợi cơn bão đi qua, mà là học cách nhảy múa trong mưa",
+    "experient": "Mình đã có hơn 1 năm kinh nghiệm lập trình Frontend với React.js"
   },
 
   "Header": {
@@ -15,11 +15,41 @@
 
   "Nav": {
     "resume": "Hồ sơ",
-    "demo": "Demo",
+    "practice": "Practice",
     "info": "Thông tin",
     "home": "Trang chủ",
     "work": "Work",
     "contact": "Contact",
-    "services": "Services"
+    "services": "Services",
+    "experience": "Kinh nghiệm"
+  },
+
+  "Experience": {
+    "name": "Tên",
+    "my_description": "I'm a frontend developer",
+    "about_me": "Về tôi",
+    "my_name": "Nguyễn Văn Tài",
+    "phone": "Điẹn thoại",
+    "email": "Email",
+    "experience": "Kinh nghiệm",
+    "over_1_year": "Hơn 1 năm",
+    
+    "my_experience": "Kinh nghiệm",
+    "membee_merchant_job_1": "Phát triển các tính năng mới dựa trên yêu cầu của dự án.",
+    "membee_merchant_job_2": "Cập nhật, tối ưu hóa và sửa lỗi nhằm cải thiện hiệu suất và tính ổn định của ứng dụng.",
+    "membee_merchant_job_3": "Hợp tác với back-end để tích hợp API một cách hiệu quả.",
+    "membee_merchant_job_4": "Làm việc chặt chẽ với designer và BA để xây dựng giao diện và chức năng phù hợp với yêu cầu.",
+
+    "membee_zalo_job_1": "Tìm hiểu Zalo Mini App CLI, Zalo Mini App API và Zalo Mini App Components để hiểu rõ hệ sinh thái phát triển ứng dụng.",
+    "membee_zalo_job_2": "Tích hợp API từ Membee và Zalo Mini App nhằm trao đổi dữ liệu mượt mà và nâng cao trải nghiệm người dùng trong ứng dụng.",
+    "membee_zalo_job_3": "Phối hợp với designer và backend để chuyển đổi UI/UX thành giao diện chức năng và đảm bảo việc tích hợp API hiệu quả.",
+    "membee_zalo_job_4": "Triển khai logic phía client và xử lý dữ liệu nhằm mang lại trải nghiệm mượt mà và tương tác tốt cho người dùng.",
+
+    "membee_shopify_job_1": "Tìm hiểu Remix, Shopify Polaris và quy trình xây dựng ứng dụng Shopify trong trang quản trị (admin dashboard)",
+    "membee_shopify_job_2": "Phối hợp với backend để tích hợp API từ Membee và Shopify.",
+    "membee_shopify_job_3": "Làm việc với designer để xây UI tuân theo các nguyên tắc thiết kế của Shopify Polaris.",
+    "membee_shopify_job_4": "Phát triển các component có thể tái sử dụng nhằm đảm bảo tính nhất quán và nâng cao hiệu quả trong quá trình phát triển.",
+    "technologies": "Công nghệ",
+    "responsibilities": "Trách nhiệm"
   }
 }
